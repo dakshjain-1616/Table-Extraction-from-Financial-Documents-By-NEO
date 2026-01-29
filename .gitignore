@@ -1,0 +1,22 @@
+# ML Models
+*.pt
+*.bin
+*.safetensors
+*.h5
+
+# Training Outputs
+checkpoints/
+results/
+runs/
+logs/
+
+# Python
+__pycache__/
+*.pyc
+
+# Mac
+.DS_Store
+
+# Env
+.env
+venv/

@@ -1,0 +1,28 @@
+{
+    "page": 0,
+    "table_index": 0,
+    "avg_ocr_confidence": 0.9852,
+    "data": {
+        "index": [
+            0,
+            1
+        ],
+        "columns": [
+            "Description",
+            "2023",
+            "2022"
+        ],
+        "data": [
+            [
+                "Revenue",
+                ",200.50",
+                ",100.00"
+            ],
+            [
+                "Net Income",
+                "40.20",
+                "10.00"
+            ]
+        ]
+    }
+}
