@@ -68,5 +68,35 @@ pipeline.export(results, "output_name")
 }
 ```
 
+## 🐋 Deployment & Setup
+
+### Docker Deployment
+The project includes a `Dockerfile` for easy containerization.
+```bash
+# Build the image
+docker build -t financial-ocr-pipeline .
+
+# Run the container
+docker run --env-file .env financial-ocr-pipeline
+```
+
+### Automated Pipeline
+You can use the provided shell script to run the full pipeline in your local environment.
+```bash
+# Make the script executable
+chmod +x run_pipeline.sh
+
+# Execute the pipeline
+./run_pipeline.sh
+```
+
 ## 📄 License
 MIT License
+
+## 📊 Optimization & Validation (v2.0)
+The pipeline has been enhanced with several advanced features to improve accuracy and reliability:
+
+- **Advanced Image Preprocessing**: Integrated OpenCV for denoising, adaptive thresholding (Otsu), and automatic deskewing to prepare documents for OCR.
+- **OCR Logic Optimization**: Implemented **Beam Search** (num_beams=5) in the TrOCR engine to produce higher-quality text sequences and more accurate confidence scores.
+- **Validation Framework**: Added a validation module that flags low-confidence cell extractions based on a configurable threshold (default: 0.85).
+- **Automated Quality Reports**: The evaluator now generates a detailed PDF report including average confidence metrics and validation statuses.

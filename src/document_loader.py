@@ -47,11 +47,13 @@ class DocumentLoader:
         return Image.open(image_path).convert("RGB")
 
 if __name__ == "__main__":
-    # Ensure directories exist
-    os.makedirs("/root/claude_tests/NEODEMO2/data/raw", exist_ok=True)
+    # Use relative paths for local testing
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    raw_data_dir = os.path.join(base_dir, "data", "raw")
+    os.makedirs(raw_data_dir, exist_ok=True)
     
     # Create test image
-    test_img_path = "/root/claude_tests/NEODEMO2/data/raw/test_image.png"
+    test_img_path = os.path.join(raw_data_dir, "test_image.png")
     Image.new('RGB', (100, 100), color='white').save(test_img_path)
     
     loader = DocumentLoader()

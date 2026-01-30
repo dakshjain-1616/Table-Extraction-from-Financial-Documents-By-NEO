@@ -18,5 +18,5 @@ __pycache__/
 .DS_Store
 
 # Env
-.env
+
 venv/
