@@ -1,4 +1,4 @@
-# Financial OCR Pipeline: Structured Table Extraction
+# Financial OCR Pipeline: Structured Table Extraction by <a href='https://heyneo.so/' target='_blank'>**NEO**</a>
 
 A high-performance OCR pipeline specialized for extracting structured data from complex financial tables using state-of-the-art Deep Learning models.
 
